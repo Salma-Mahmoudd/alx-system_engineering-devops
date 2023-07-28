@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#displays the content of the file /etc/passwd.
+while IFS=':' read -r un pass uid gid info dir comm
+do
+	echo "The user $un is part of the $gid gang,"\
+	       "lives in $dir and rides $comm."\
+	       "$uid's place is protected by the passcode $pass,"\
+	       "more info about the user here: $info"
+done < "/etc/passwd"
