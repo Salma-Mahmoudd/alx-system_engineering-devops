@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Nginx server so that /redirect_me is redirecting to another page.
+
+sudo sed -i '/# Add/a\\tlocation \/redirect_me {\n\t\treturn 301 http:\/\/getsalma.tech\/;\n\t}' /etc/nginx/sites-available/default
